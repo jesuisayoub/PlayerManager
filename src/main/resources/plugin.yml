@@ -1,0 +1,8 @@
+name: PlayerManager
+version: '${project.version}'
+main: fr.ayoub.playermanager.PlayerManager
+api-version: '1.21'
+commands:
+  playermanager:
+    description: "Open the player manager menu"
+    aliases: pm
