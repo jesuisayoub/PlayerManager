@@ -16,7 +16,12 @@ public class VirtualMenu {
     public VirtualMenu(Player player, OfflinePlayer targetPlayer) {
         this.player = player;
         this.targetPlayer = targetPlayer;
-        this.targetPlayerObject = new PlayerObject(targetPlayer.getPlayer());
+        PlayerObject playerObject = Manager.getPlayer(targetPlayer.getPlayer());
+        if (playerObject == null) {
+            this.targetPlayerObject = new PlayerObject(targetPlayer.getPlayer());
+        } else {
+            this.targetPlayerObject = playerObject;
+        }
         open();
         PlayerManager.virtualMenu.put(player, this);
     }
