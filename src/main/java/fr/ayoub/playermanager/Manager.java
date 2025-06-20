@@ -15,4 +15,8 @@ public class Manager {
         return null;
     }
 
+    public static String setFormat(int nb) {
+        return nb > 9 ? String.valueOf(nb) : "0" + nb;
+    }
+
 }

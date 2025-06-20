@@ -6,3 +6,6 @@ commands:
   playermanager:
     description: "Open the player manager menu"
     aliases: pm
+  statistics:
+    description: "Open the statistics player menu"
+    aliases: stats

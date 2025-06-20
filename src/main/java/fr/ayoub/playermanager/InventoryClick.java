@@ -15,7 +15,7 @@ public class InventoryClick implements Listener {
         Player player = (Player) event.getWhoClicked();
 
         PlayerManager.virtualMenu.forEach((p, v) -> {
-            if (v.getPlayer() == player) {
+            if (v.player == player) {
                 v.click(event);
             }
         });

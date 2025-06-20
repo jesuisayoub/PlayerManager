@@ -14,8 +14,10 @@ public class ButtonManager {
         ItemStack itemStack = new ItemStack(material);
         ItemMeta itemMeta = itemStack.getItemMeta();
         itemMeta.setDisplayName("§f" + name);
-        String[] paginator = ChatPaginator.wordWrap(desc, 30);
-        itemMeta.setLore(Arrays.asList(paginator));
+        if (desc != null) {
+            String[] paginator = ChatPaginator.wordWrap(desc, 30);
+            itemMeta.setLore(Arrays.asList(paginator));
+        }
         itemStack.setItemMeta(itemMeta);
         return itemStack;
     }

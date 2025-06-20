@@ -2,7 +2,6 @@ package fr.ayoub.playermanager;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -18,7 +17,8 @@ public final class PlayerManager extends JavaPlugin {
         PluginManager pluginManager = Bukkit.getPluginManager();
         pluginManager.registerEvents(new InventoryClick(), this);
         pluginManager.registerEvents(new Nofall(), this);
-        getCommand("playermanager").setExecutor(new Command());
+        getCommand("playermanager").setExecutor(new PmCMD());
+        getCommand("statistics").setExecutor(new StatsCMD());
     }
 
     @Override
